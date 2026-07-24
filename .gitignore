@@ -1,0 +1,21 @@
+.env
+__pycache__/
+
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Base de datos vectorial local (ChromaDB la recrea sola al arrancar)
+chroma_db/
+db/
+*.sqlite3
+
+# Variables de entorno y credenciales
+.env
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.py[cod]
+*$py.class

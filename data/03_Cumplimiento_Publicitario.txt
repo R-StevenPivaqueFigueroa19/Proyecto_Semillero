@@ -1,0 +1,4 @@
+Políticas de Cumplimiento Publicitario - Patito S.A.
+Consentimiento y Privacidad: Toda campaña enviada a través de canales directos como Email Marketing o SMS requiere obligatoriamente el consentimiento previo y explícito (opt-in) del usuario.
+Reclamos y Promesas: Queda estrictamente prohibido usar "claims" o afirmaciones engañosas sobre los productos. Todo descuento debe mostrar sus términos y condiciones de forma clara y legible.
+Manejo de Datos: Todos los datos recolectados en campañas deben almacenarse cifrados.
