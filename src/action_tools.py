@@ -15,11 +15,11 @@ def registrar_campana(
     consentimiento_email: str = ""
 ) -> str:
     """
-    Herramienta para registrar una solicitud de campaña de marketing[cite: 4].
+    Herramienta para registrar una solicitud de campaña de marketing.
     Usa esta herramienta SOLO cuando el usuario haya dado su confirmación explícita para registrar la campaña.
     """
     
-    # 1. Sistema de control: Validar que estén todos los datos obligatorios[cite: 4]
+    # 1. Sistema de control: Validar que estén todos los datos obligatorios
     faltantes = []
     if not nombre: faltantes.append("nombre de la campaña")
     if not objetivo: faltantes.append("objetivo (awareness, leads o conversión)")
@@ -29,16 +29,16 @@ def registrar_campana(
     if not fecha_inicio: faltantes.append("fecha de inicio")
     if not fecha_fin: faltantes.append("fecha de fin")
     
-    # Validación extra: si usa email, debe confirmar que el público dio consentimiento[cite: 4]
+    # Validación extra: si usa email, debe confirmar que el público dio consentimiento
     if "email" in canales.lower() and not consentimiento_email:
         faltantes.append("confirmación de consentimiento de marketing para email")
 
-    # 2. Si falta algo, detenemos la acción y le pedimos al usuario lo que falta[cite: 4]
+    # 2. Si falta algo, detenemos la acción y le pedimos al usuario lo que falta
     if faltantes:
         campos = ", ".join(faltantes)
         return f"Para poder registrar la campaña, necesito que me proporciones los siguientes datos faltantes: {campos}."
 
-    # 3. Generar un identificador único y la fecha/hora actual[cite: 4]
+    # 3. Generar un identificador único y la fecha/hora actual
     id_campana = f"RMB-{str(uuid.uuid4())[:6].upper()}"
     fecha_registro = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -50,8 +50,9 @@ def registrar_campana(
         f"Fechas: {fecha_inicio} al {fecha_fin}\n"
     )
 
-    # 5. Escribir en el archivo de texto local[cite: 4]
-    ruta_archivo = os.path.join(os.path.dirname(__dirname__), "data", "registro_campanas.txt")
+    # 5. Escribir en el archivo de texto local (CORREGIDO)
+    ruta_base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    ruta_archivo = os.path.join(ruta_base, "data", "registro_campanas.txt")
     
     try:
         with open(ruta_archivo, "a", encoding="utf-8") as f:

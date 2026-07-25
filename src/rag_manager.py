@@ -1,4 +1,3 @@
-# src/rag_manager.py
 import os
 from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
@@ -35,11 +34,6 @@ def crear_retriever(ruta_archivo: str, nombre_coleccion: str):
     chunks = text_splitter.split_documents(documentos)
     
     # 3. Generación de Embeddings obligatorios con Gemini
-    # Aquí forzamos la lectura explícita de la API Key para evitar el error 404
-    # 3. Generación de Embeddings obligatorios con Gemini
-    # 3. Generación de Embeddings con Gemini
-    # 3. Generación de Embeddings con Gemini
-    # 3. Generación de Embeddings con el modelo actual de Gemini
     api_key = os.getenv("GOOGLE_API_KEY")
     embeddings = GoogleGenerativeAIEmbeddings(
         model="models/gemini-embedding-001",
