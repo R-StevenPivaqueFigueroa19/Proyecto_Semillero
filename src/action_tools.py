@@ -41,8 +41,7 @@ def registrar_campana(
     # 3. Generar un identificador único y la fecha/hora actual
     id_campana = f"RMB-{str(uuid.uuid4())[:6].upper()}"
     fecha_registro = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-    # 4. Formatear la cadena de texto que se va a guardar
+    
     registro = (
         f"[{fecha_registro}] ID: {id_campana} | "
         f"Campaña: {nombre} | Objetivo: {objetivo} | Canales: {canales} | "
