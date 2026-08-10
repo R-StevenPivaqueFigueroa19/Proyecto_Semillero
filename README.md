@@ -44,7 +44,8 @@ Sigue estos pasos detallados para levantar el entorno y ejecutar el sistema loca
 Abre tu terminal y descarga el código fuente a tu máquina local:
 
 ```bash
-git clone [https://github.com/R-StevenPivaqueFigueroa19/Proyecto_Semillero.git](https://github.com/R-StevenPivaqueFigueroa19/Proyecto_Semillero.git)
+git clone https://github.com/R-StevenPivaqueFigueroa19/Proyecto_Semillero.git
+
 cd Proyecto_Semillero
 
 ---
